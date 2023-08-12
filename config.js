@@ -16,6 +16,6 @@ module.exports = {
         DB_HOST: process.env["TELEGRAM_BOT_DB_HOST"] || "localhost"
     },
     ERR_MESSAGES: {
-        CONSTANT_ERR_COMMAND: "Modo incorrecto de úso.\nEscribe /help para mas información."
+        CONSTANT_ERR_COMMAND: "Incorrect usage mode.\nType /help for more information."
     }
 }

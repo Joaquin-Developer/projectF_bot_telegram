@@ -13,7 +13,7 @@ class BotEventsHandler {
 
     static hearsHandle(ctx) {
         const username = ctx.message.from.first_name
-        ctx.reply(`Holis ${username}!\nPara saber como usarme escribí /help`)
+        ctx.reply(`Hi ${username}!\nTo learn how to use me, type /help.`)
     }
 
     static async tour(ctx) {
