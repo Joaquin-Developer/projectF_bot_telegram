@@ -16,11 +16,13 @@ async function getDataByEndpoint(endpointName) {
 }
 
 
-function generateResponseByData(data) {
+function generateResponseByData(data, dateFormatOnlyMMDD = false) {
     let txt = ""
 
     data.forEach(tour => {
-        txt += `${utils.dateToStringFormat(new Date(tour.show_date))} - ${tour.place}\n`
+        const date = utils.dateToStringFormat(new Date(tour.show_date), dateFormatOnlyMMDD)
+
+        txt += `${date} - ${tour.place}\n`
         txt += `- Scenary: ${tour.scenary}\n- Tour/Fest: ${tour.tour_show}\n\n`
     })
 
@@ -39,7 +41,7 @@ functions.getCurrentMonthTourDates = async () => {
     const date = new Date()
     const actualMonth = date.toLocaleString('en-US', { month: "long", year: "numeric" })
 
-    return `Freedom Tour Dates - ${actualMonth}:\n\n${generateResponseByData(data)}`
+    return `Freedom Tour Dates - ${actualMonth}:\n\n${generateResponseByData(data, true)}`
 }
 
 
