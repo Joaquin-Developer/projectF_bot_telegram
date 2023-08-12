@@ -1,0 +1,30 @@
+{
+  "name": "projectf_bot_telegram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joaquin-Developer/projectF_bot_telegram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joaquin-Developer/projectF_bot_telegram/issues"
+  },
+  "homepage": "https://github.com/Joaquin-Developer/projectF_bot_telegram#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "mongodb": "^5.7.0",
+    "telegraf": "^4.12.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

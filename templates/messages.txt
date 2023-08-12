@@ -1,0 +1,11 @@
+Commands:
+
+/tour: List upcoming shows for the band.
+Options: <month> <-m> - To view only those of the current month.
+Examples:
+/tour
+/tour -m
+/tour month
+
+
+-Freedom
