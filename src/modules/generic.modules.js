@@ -69,8 +69,8 @@ functions.getToursByLocation = async (data) => {
 
     const resp = await utils.fetch(url, utils.TypeRequest.POST, data)
 
-    if (data) {
-        return "Freedom Tour Dates in your location:\n\n" + generateResponseByData(data)
+    if (resp) {
+        return "Freedom Tour Dates in your location:\n\n" + generateResponseByData(resp)
     }
     return "No tours found near your location."
 }
