@@ -28,6 +28,16 @@ class BotEventsHandler {
         }
 
     }
+
+    static async location(ctx) {
+        const latitude = ctx.message.location.latitude
+        const longitude = ctx.message.location.longitude
+
+        const geolocationData = await functions.geolocation(latitude, longitude)
+
+        ctx.reply(await functions.getToursByLocation(geolocationData))
+
+    }
 }
 
 module.exports = BotEventsHandler

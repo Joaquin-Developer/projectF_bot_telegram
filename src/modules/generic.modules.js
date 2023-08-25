@@ -45,4 +45,35 @@ functions.getCurrentMonthTourDates = async () => {
 }
 
 
+functions.geolocation = async (latitude, longitude) => {
+    let url = config.geolocation_api.API_URL
+    url += `?format=jsonv2&lat=${latitude}&lon=${longitude}`
+
+    try {
+        const data = await utils.fetch(url)
+        return {
+            city: data.address.city,
+            state: data.address.state,
+            country: data.address.country
+        }
+
+    } catch (error) {
+        throw error
+    }
+}
+
+
+functions.getToursByLocation = async (data) => {
+    const api = config.api
+    const url = api.API_URL + api.ENDPOINTS["tours_by_location"]
+
+    const resp = await utils.fetch(url, utils.TypeRequest.POST, data)
+
+    if (data) {
+        return "Freedom Tour Dates in your location:\n\n" + generateResponseByData(data)
+    }
+    return "No tours found near your location."
+}
+
+
 module.exports = functions

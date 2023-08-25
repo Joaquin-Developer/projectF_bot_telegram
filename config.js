@@ -4,8 +4,12 @@ module.exports = {
         API_URL: "http://localhost:5016/api/v2",
         ENDPOINTS: {
             "get_actual_tour_dt": "/tour_dates",
-            "get_current_month_tour_dt": "/tour_dates_current_month"
+            "get_current_month_tour_dt": "/tour_dates_current_month",
+            "tours_by_location": "/tour_dates_by_location"
         }
+    },
+    geolocation_api: {
+        API_URL: "https://nominatim.openstreetmap.org/reverse"
     },
     bot: {
         TELEGRAM_TOKEN: process.env["TELEGRAM_BOT_PROJECT_F_TOKEN"] || "PONER_TOKEN_ACA",

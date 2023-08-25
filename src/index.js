@@ -7,6 +7,7 @@ const bot = new Telegraf(config.bot.TELEGRAM_TOKEN)
 
 bot.help(botEvents.help)
 bot.command("tour", botEvents.tour)
+bot.on("location", botEvents.location)
 bot.hears(/.*/, botEvents.hearsHandle)
 
 console.log("Iniciando bot...")
