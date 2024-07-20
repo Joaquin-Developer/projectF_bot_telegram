@@ -31,13 +31,13 @@ function generateResponseByData(data, dateFormatOnlyMMDD = false) {
 
 
 functions.getActualTourDates = async () => {
-    const data = await getDataByEndpoint("get_actual_tour_dt")
+    const data = await getDataByEndpoint("get_actual_show_dt")
     return "Freedom Tour Dates:\n\n" + generateResponseByData(data)
 }
 
 
 functions.getCurrentMonthTourDates = async () => {
-    const data = await getDataByEndpoint("get_current_month_tour_dt")
+    const data = await getDataByEndpoint("get_current_month_show_dt")
     const date = new Date()
     const actualMonth = date.toLocaleString('en-US', { month: "long", year: "numeric" })
 

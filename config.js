@@ -1,10 +1,10 @@
 module.exports = {
     inProduction: true,
     api: {
-        API_URL: "http://localhost:5016/api/v2",
+        API_URL: "http://localhost:5016/api/v3",
         ENDPOINTS: {
-            "get_actual_tour_dt": "/tour_dates",
-            "get_current_month_tour_dt": "/tour_dates_current_month",
+            "get_actual_show_dt": "/show_dates",
+            "get_current_month_show_dt": "/show_dates_current_month",
             "tours_by_location": "/tour_dates_by_location"
         }
     },
